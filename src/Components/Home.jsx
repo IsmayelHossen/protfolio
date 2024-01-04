@@ -1,263 +1,374 @@
 import React, { useEffect, useState } from "react";
-import profileimg from "../Components/Img/profile.JPG";
+import profileimg from "../Components/Img/profile1.jpg";
+import { Slide, Zoom } from "react-reveal";
 const Home = () => {
   //console.log(frontend);
+  const [dgn, setdgn] = useState("ReactJs");
+  const Experties = [
+    "Php",
+    "Laravel",
+    "Express js(node js)",
+    "Reactjs",
+    "Redux",
+    "CSS",
+    "HTML",
+    "BootStrap",
+    "Mysql",
+    "Oracle Database",
+    "Git & Github",
+    "Rest Api",
+  ];
+
+  useEffect(() => {
+    let abc = setInterval(() => {
+      //   Design();
+      let index = Math.floor(Math.random() * 12);
+      setdgn(Experties[index]);
+    }, 3000);
+    return () => {
+      clearInterval(abc);
+    };
+  });
+
   return (
     <div>
       <div class="container-fluid">
         <>
           <div class="homepage">
-            <div class="row">
-              <div class="col-md-4">
-                <img src={profileimg} class="profile-image" />
+            <Zoom>
+              <div className="">
+                <div class="row ">
+                  <div class="col-md-4 ">
+                    <div class="image">
+                      <img src={profileimg} class="profile-image" />
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <h4 className="nameTitle">Ismayel Hossen</h4>
+                    <h5 className={`designation animate__animated  `}>
+                      Full Stack Web Developer
+                    </h5>
+                    <p>
+                      Currently Works at Tech Valley Solutions Limited <br />
+                      <span style={{ color: "#a21c0d", fontWeight: "600" }}>
+                        As{" "}
+                      </span>
+                      Web Developer
+                    </p>
+                    <h6
+                      className={`designation  ${
+                        dgn == "Php"
+                          ? "animate__animated animate__bounce"
+                          : dgn == "Laravel"
+                          ? "animate__animated  animate__rotateOut"
+                          : dgn == "Express js(node js)"
+                          ? "animate__animated animate__slideOutRight"
+                          : dgn == "Reactjs"
+                          ? "animate__animated  animate__slideOutLeft"
+                          : dgn == "Redux"
+                          ? "animate__animated animate__slideOutRight"
+                          : dgn == "CSS"
+                          ? "animate__animated  animate__slideInUp"
+                          : dgn == "HTML"
+                          ? "animate__animated animate__slideInRight"
+                          : dgn == "BootStrap"
+                          ? "animate__animated  animate__slideInLeft"
+                          : dgn == "Mysql"
+                          ? "animate__animated animate__slideInDown"
+                          : dgn == "Oracle Database"
+                          ? "animate__animated  animate__zoomOutLeft"
+                          : dgn == "Git & Github"
+                          ? "animate__animated  animate__zoomOutLeft"
+                          : dgn == "Rest Api"
+                          ? "animate__animated  animate__slideInDown"
+                          : "animate__animated  animate__rotateOut"
+                      }  `}
+                    >
+                      Experties At-{" "}
+                      <span style={{ color: "red" }}>({dgn})</span>
+                    </h6>
+                    <p>Email:ismayelHossen123@gmail.com</p>
+                    <p>Phone:01952152883</p>
+                    <p>
+                      Github: <a href="https://github.com/IsmayelHossen"></a>{" "}
+                      https://github.com/IsmayelHossen
+                    </p>
+                    <p>
+                      Linkedin:
+                      <a href="https://www.linkedin.com/in/ismayel-hossen-9630661a7/">
+                        {" "}
+                        https://www.linkedin.com/in/ismayel-hossen-9630661a7/
+                      </a>
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="col-md-8">
-                <h4 className="nameTitle">Ismayel Hossen</h4>
-                <h5 className="designation">Full Stack Web Developer</h5>
-                <p>
-                  Currently Works at Tech Valley Solutions Limited <br />
-                  <span style={{ color: "#a21c0d", fontWeight: "600" }}>
-                    As{" "}
-                  </span>
-                  Web Developer
-                </p>
-                <p>Email:ismayelHossen123@gmail.com</p>
-                <p>Phone:01952152883</p>
-                <p>
-                  Github: <a href="https://github.com/IsmayelHossen"></a>{" "}
-                  https://github.com/IsmayelHossen
-                </p>
-                <p>
-                  Linkedin:
-                  <a href="https://www.linkedin.com/in/ismayel-hossen-9630661a7/">
-                    {" "}
-                    https://www.linkedin.com/in/ismayel-hossen-9630661a7/
-                  </a>
-                </p>
-              </div>
-            </div>
+            </Zoom>
           </div>
         </>
 
-        <div class="technologies">
-          <h5 className="toolsTechnology text-center">
-            Tools And Technologies knowledge
-          </h5>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="frontend">
-                <h4 class="frontend-title">Frontend</h4>
-                <div class="table-responsive">
-                  <table>
-                    <tr>
-                      <th>CSS</th>
-                      <td class="td-progressbar">
-                        <div class="progress">
-                          <div
-                            className="progress-bar progress-bar-striped active"
-                            role="progressbar"
-                            aria-valuenow={40}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            style={{ width: "85%" }}
-                          >
-                            85%
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>Bootstrap Framework</th>
-                      <td class="td-progressbar">
-                        <div class="progress">
-                          <div
-                            className="progress-bar progress-bar-striped active"
-                            role="progressbar"
-                            aria-valuenow={40}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            style={{ width: "707%" }}
-                          >
-                            707%
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>Js</th>
-                      <td class="td-progressbar">
-                        <div class="progress">
-                          <div
-                            className="progress-bar progress-bar-striped active"
-                            role="progressbar"
-                            aria-valuenow={40}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            style={{ width: "60%" }}
-                          >
-                            60%
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>HTML</th>
-                      <td class="td-progressbar">
-                        <div class="progress">
-                          <div
-                            className="progress-bar progress-bar-striped active"
-                            role="progressbar"
-                            aria-valuenow={40}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            style={{ width: "985%" }}
-                          >
-                            985%
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>Js Framework(Vue Js)</th>
-                      <td class="td-progressbar">
-                        <div class="progress">
-                          <div
-                            className="progress-bar progress-bar-striped active"
-                            role="progressbar"
-                            aria-valuenow={40}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            style={{ width: "40%" }}
-                          >
-                            40%
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
+        <div class="technologies ">
+          <Zoom>
+            <div>
+              <h5 className="toolsTechnology text-center">
+                Tools And Technologies knowledge
+              </h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="frontend">
+                    <h4 class="frontend-title">Frontend</h4>
+                    <div class="table-responsive">
+                      <table>
+                        <tr>
+                          <th>CSS</th>
+                          <td class="td-progressbar">
+                            <div class="progress">
+                              <div
+                                className="progress-bar progress-bar-striped active"
+                                role="progressbar"
+                                aria-valuenow={40}
+                                aria-valuemin={0}
+                                aria-valuemax={100}
+                                style={{ width: "85%" }}
+                              >
+                                85%
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Bootstrap Framework</th>
+                          <td class="td-progressbar">
+                            <div class="progress">
+                              <div
+                                className="progress-bar progress-bar-striped active"
+                                role="progressbar"
+                                aria-valuenow={40}
+                                aria-valuemin={0}
+                                aria-valuemax={100}
+                                style={{ width: "70%" }}
+                              >
+                                70%
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Js</th>
+                          <td class="td-progressbar">
+                            <div class="progress">
+                              <div
+                                className="progress-bar progress-bar-striped active"
+                                role="progressbar"
+                                aria-valuenow={40}
+                                aria-valuemin={0}
+                                aria-valuemax={100}
+                                style={{ width: "60%" }}
+                              >
+                                60%
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>HTML</th>
+                          <td class="td-progressbar">
+                            <div class="progress">
+                              <div
+                                className="progress-bar progress-bar-striped active"
+                                role="progressbar"
+                                aria-valuenow={40}
+                                aria-valuemin={0}
+                                aria-valuemax={100}
+                                style={{ width: "98%" }}
+                              >
+                                98%
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th> Library(React Js)</th>
+                          <td class="td-progressbar">
+                            <div class="progress">
+                              <div
+                                className="progress-bar progress-bar-striped active"
+                                role="progressbar"
+                                aria-valuenow={40}
+                                aria-valuemin={0}
+                                aria-valuemax={100}
+                                style={{ width: "80%" }}
+                              >
+                                80%
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Library(Redux)</th>
+                          <td class="td-progressbar">
+                            <div class="progress">
+                              <div
+                                className="progress-bar progress-bar-striped active"
+                                role="progressbar"
+                                aria-valuenow={40}
+                                aria-valuemin={0}
+                                aria-valuemax={100}
+                                style={{ width: "70%" }}
+                              >
+                                70%
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Framework(Vue Js)</th>
+                          <td class="td-progressbar">
+                            <div class="progress">
+                              <div
+                                className="progress-bar progress-bar-striped active"
+                                role="progressbar"
+                                aria-valuenow={40}
+                                aria-valuemin={0}
+                                aria-valuemax={100}
+                                style={{ width: "40%" }}
+                              >
+                                40%
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
 
-            <div class="col-md-6">
-              <div class="backend">
-                <h4 class="backend-title">Backend</h4>
-                <div class="table-responsive">
-                  <table class="">
-                    <tr>
-                      <th>PhP</th>
-                      <td class="td-progressbar">
-                        <div class="progress">
-                          <div
-                            className="progress-bar progress-bar-success progress-bar-striped active"
-                            role="progressbar"
-                            aria-valuenow={40}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            style={{
-                              width: "80%",
-                              backgroundColor: "rgb(35, 162, 126)",
-                            }}
-                          >
-                            80%
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>Laravel</th>
-                      <td class="td-progressbar">
-                        <div class="progress">
-                          <div
-                            className="progress-bar progress-bar-success progress-bar-striped active"
-                            role="progressbar"
-                            aria-valuenow={40}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            style={{
-                              width: "70%",
-                              backgroundColor: "rgb(35, 162, 126)",
-                            }}
-                          >
-                            70%
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>NodeJs(Expree js)</th>
-                      <td class="td-progressbar">
-                        <div class="progress">
-                          <div
-                            className="progress-bar progress-bar-success progress-bar-striped active"
-                            role="progressbar"
-                            aria-valuenow={40}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            style={{
-                              width: "60%",
-                              backgroundColor: "rgb(35, 162, 126)",
-                            }}
-                          >
-                            60%
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>Database(Mysql)</th>
-                      <td class="td-progressbar">
-                        <div class="progress">
-                          <div
-                            className="progress-bar progress-bar-success progress-bar-striped active"
-                            role="progressbar"
-                            aria-valuenow={40}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            style={{
-                              width: "60%",
-                              backgroundColor: "rgb(35, 162, 126)",
-                            }}
-                          >
-                            60%
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>Database(Oracle)</th>
-                      <td class="td-progressbar">
-                        <div class="progress">
-                          <div
-                            className="progress-bar progress-bar-success progress-bar-striped active"
-                            role="progressbar"
-                            aria-valuenow={40}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                            style={{
-                              width: "40%",
-                              backgroundColor: "rgb(35, 162, 126)",
-                            }}
-                          >
-                            40%
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    ;
-                  </table>
+                <div class="col-md-6">
+                  <div class="backend">
+                    <h4 class="backend-title">Backend</h4>
+                    <div class="table-responsive">
+                      <table class="">
+                        <tr>
+                          <th>PhP</th>
+                          <td class="td-progressbar">
+                            <div class="progress">
+                              <div
+                                className="progress-bar progress-bar-success progress-bar-striped active"
+                                role="progressbar"
+                                aria-valuenow={40}
+                                aria-valuemin={0}
+                                aria-valuemax={100}
+                                style={{
+                                  width: "80%",
+                                  backgroundColor: "rgb(35, 162, 126)",
+                                }}
+                              >
+                                80%
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Laravel</th>
+                          <td class="td-progressbar">
+                            <div class="progress">
+                              <div
+                                className="progress-bar progress-bar-success progress-bar-striped active"
+                                role="progressbar"
+                                aria-valuenow={40}
+                                aria-valuemin={0}
+                                aria-valuemax={100}
+                                style={{
+                                  width: "70%",
+                                  backgroundColor: "rgb(35, 162, 126)",
+                                }}
+                              >
+                                70%
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>NodeJs(Express js)</th>
+                          <td class="td-progressbar">
+                            <div class="progress">
+                              <div
+                                className="progress-bar progress-bar-success progress-bar-striped active"
+                                role="progressbar"
+                                aria-valuenow={40}
+                                aria-valuemin={0}
+                                aria-valuemax={100}
+                                style={{
+                                  width: "60%",
+                                  backgroundColor: "rgb(35, 162, 126)",
+                                }}
+                              >
+                                60%
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Database(Mysql)</th>
+                          <td class="td-progressbar">
+                            <div class="progress">
+                              <div
+                                className="progress-bar progress-bar-success progress-bar-striped active"
+                                role="progressbar"
+                                aria-valuenow={40}
+                                aria-valuemin={0}
+                                aria-valuemax={100}
+                                style={{
+                                  width: "60%",
+                                  backgroundColor: "rgb(35, 162, 126)",
+                                }}
+                              >
+                                60%
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Database(Oracle)</th>
+                          <td class="td-progressbar">
+                            <div class="progress">
+                              <div
+                                className="progress-bar progress-bar-success progress-bar-striped active"
+                                role="progressbar"
+                                aria-valuenow={40}
+                                aria-valuemin={0}
+                                aria-valuemax={100}
+                                style={{
+                                  width: "40%",
+                                  backgroundColor: "rgb(35, 162, 126)",
+                                }}
+                              >
+                                40%
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <div className="mx-auto text-center">
+                <p>
+                  <strong>Clear Understanding OOP</strong>
+                  <br />
+                </p>
+                <p>
+                  <strong>RestFull API</strong>
+                  <br />
+                </p>
+                <p>
+                  <strong>Git &amp; Github</strong>
+                  <br />
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="mx-auto text-center">
-            <>
-              <p>
-                <strong></strong>
-                <br />
-              </p>
-            </>
-          </div>
+          </Zoom>
         </div>
 
         <div class="projectsLink">

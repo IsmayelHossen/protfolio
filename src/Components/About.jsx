@@ -1,6 +1,6 @@
 import Axios from "axios";
 import React, { useEffect, useState } from "react";
-import profileimg from "../Components/Img/profile.JPG";
+import profileimg from "../Components/Img/profile1.jpg";
 const imageName = window.location.origin + "/images/ismayel.JPG";
 
 const About = () => {
@@ -11,7 +11,9 @@ const About = () => {
           <div class="row">
             <>
               <div class="col-md-4">
-                <img src={profileimg} class="about-image" />
+                <div class="imageAbout">
+                  <img src={profileimg} class="about-image" />
+                </div>
               </div>
               <div class="col-md-8">
                 <p>
@@ -89,7 +91,7 @@ const About = () => {
                       <td>B.Sc (Engg.)</td>
                       <td>ICT</td>
                       <td>MBSTU</td>
-                      <td>3.45</td>
+                      <td>3.41</td>
                       <td>2019</td>
                     </tr>
                   </tbody>

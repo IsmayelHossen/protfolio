@@ -64,15 +64,34 @@
 	margin-top: 1em;
 	padding: 16px 5px;
 	background: #F5F6F9;
+    margin-bottom: 1em;
    
 }
 .homepage p{
 margin-bottom:0px;
 }
-.profile-image {
+.image{
+    width:300px;
+  height: 250px;
+    clear: both;
+display: block;
+    position: absolute;
+ 
+}
+.imageAbout{
+    width:350px;
+  height: 300px;
+    clear: both;
+display: block;
+    position: absolute;  
+}
+.image .profile-image {
+    
 	vertical-align: middle;
-	width: 100%;
-	max-width: 300px;
+    height:100%;
+	
+    width: 100%;
+  
 	/* text-align: ; */
 	margin: 0 auto;
 	display: block;
@@ -275,9 +294,9 @@ font-weight: 600;
 		display: block;
 		margin-top: .5em;
 	}
-	.about-image{
+.imageAbout .about-image{
 width: 100%;
-max-width: 450px;
+height: 100%;
 margin: 0 auto;
 display: block;
 border-radius: 4px;

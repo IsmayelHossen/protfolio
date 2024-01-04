@@ -11,6 +11,9 @@ import Contact from "./Components/Contact";
 import Blog from "./Components/Social/Blog";
 import NotFoundpage from "./Components/NotFoundpage";
 import "./Style.css";
+import "animate.css";
+import Services from "./Components/Social/Services";
+
 function App() {
   return (
     <Router>
@@ -22,6 +25,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
 
           <Route path="/blog" element={<Blog />} />
+          <Route path="/service" element={<Services />} />
 
           <Route path="*" element={<NotFoundpage />} />
         </>

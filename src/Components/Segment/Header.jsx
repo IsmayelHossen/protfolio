@@ -30,7 +30,7 @@ function Header(params) {
         >
           <div class="container-fluid">
             <Link to="/" class="navbar-brand">
-              Protfolio
+              IHOSSEN
             </Link>
             <button
               class="navbar-toggler"
@@ -69,16 +69,16 @@ function Header(params) {
                     to="/blog"
                     class="nav-link"
                   >
-                    Blog
+                    Works
                   </Link>
                 </li>
                 <li class="nav-item">
                   <Link
-                    id={location.pathname == "/chat" ? "ActiveLink" : ""}
-                    to="/chat"
+                    id={location.pathname == "/service" ? "ActiveLink" : ""}
+                    to="/service"
                     class="nav-link"
                   >
-                    Chat
+                    Services
                   </Link>
                 </li>
               </ul>

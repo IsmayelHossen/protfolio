@@ -20,7 +20,7 @@ const Footer = () => {
           <span> Design</span> & <span>Developed</span> By Ismayel
           Hossen(ShawpnobuzzBD)
         </h5>
-        <p class="text-center">Protfolio@copy right 2022</p>
+        <p class="text-center">Protfolio@copy right 2023</p>
       </div>
       {/* )} */}
     </div>
